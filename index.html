@@ -1,49 +1,183 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mi primera página web</title>
-	<style>
-		body {
-			background-color: #f2f2f2;
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-		}
-
-		.container {
-			width: 80%;
-			margin: 0 auto;
-			padding: 20px;
-			background-color: white;
-			box-shadow: 0 0 10px rgba(0,0,0,0.3);
-		}
-
-		h1 {
-			color: #333;
-			text-align: center;
-			margin-top: 50px;
-		}
-
-		p {
-			color: #666;
-			line-height: 1.5;
-			margin-top: 20px;
-		}
-
-		a {
-			color: #007bff;
-			text-decoration: none;
-		}
-
-		a:hover {
-			text-decoration: underline;
-		}
-	</style>
+	<title>Mi Portafolio Personal</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
 </head>
+<style>
+		/* Estilos para el cuerpo de la página */
+	body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	}
+
+	/* Estilos para el encabezado */
+	header {
+	background-color: #3A4B53;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	}
+
+	header h1 {
+	margin: 0;
+	}
+
+	/* Estilos para la sección "Acerca de mí" */
+	#about {
+	background-color: #f2f2f2;
+	padding: 50px;
+	}
+
+	#about h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+	}
+
+	#about p {
+	font-size: 18px;
+	line-height: 1.5;
+	}
+
+	/* Estilos para la sección "Habilidades" */
+	#skills {
+	background-color: #fff;
+	padding: 50px;
+	}
+
+	#skills h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+	}
+
+	#skills ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	}
+
+	#skills li {
+	display: inline-block;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	background-color: #f2f2f2;
+	padding: 10px 20px;
+	border-radius: 10px;
+	font-size: 18px;
+	color: #333;
+	}
+
+	/* Estilos para la sección "Proyectos" */
+	#projects img {
+	background-color: #f2f2f2;
+	padding: 50px;
+	}
+	
+	#projects h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+	}
+
+	#projects .project {
+	display: flex;
+	margin-bottom: 30px;
+	}
+
+	#projects .project img {
+	width: 300px;
+	height: 200px;
+	object-fit: cover;
+	margin-right: 20px;
+	}
+
+	#projects .project .project-info {
+	flex: 1;
+	}
+
+	#projects .project h3 {
+	font-size: 24px;
+	margin: 0 0 10px 0;
+	}
+
+	#projects .project p {
+	font-size: 18px;
+	line-height: 1.5;
+	margin: 0;
+	}
+
+	/* Estilos para el pie de página */
+	footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	}
+
+	footer p {
+	margin: 0;
+	}
+
+</style>
 <body>
-	<div class="container">
-		<h1>Bienvenido a mi página web</h1>
-		<p>Esta es una página web sencilla creada con HTML y CSS. Puedes aprender más sobre cómo crear páginas web utilizando estos lenguajes en <a href="https://www.w3schools.com" target="_blank">W3Schools</a>.</p>
-	</div>
+	<header>
+		<h1>Mi Nombre</h1>
+		<nav>
+			<ul>
+				<li><a href="#about">Sobre Mí</a></li>
+				<li><a href="#portfolio">Portafolio</a></li>
+				<li><a href="#contact">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="about">
+			<h2>Sobre Mí</h2>
+			<p>Breve descripción de quién eres, cuáles son tus habilidades, y por qué estás interesado en el área en la que te especializas. También puedes incluir información sobre tus estudios, certificaciones, etc.</p>
+		</section>
+
+		<section id="portfolio">
+			<h2>Portafolio</h2>
+			<p>Lista de tus proyectos más destacados con imágenes, descripciones y enlaces a los mismos.</p>
+			<ul>
+				<li>
+					<img src="https://images.pexels.com/photos/876345/pexels-photo-876345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Proyecto 1">
+					<h3>Proyecto 1</h3>
+					<p>Descripción del proyecto 1</p>
+					<a href="#">Ver proyecto</a>
+				</li>
+				<li>
+					<img src="proyecto2.png" alt="Proyecto 2">
+					<h3>Proyecto 2</h3>
+					<p>Descripción del proyecto 2</p>
+					<a href="#">Ver proyecto</a>
+				</li>
+			</ul>
+		</section>
+
+		<section id="contact">
+			<h2>Contacto</h2>
+			<p>Formulario de contacto o información de cómo contactarte. También puedes incluir enlaces a tus redes sociales.</p>
+			<form action="enviar.php" method="post">
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre" name="nombre" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+				<label for="mensaje">Mensaje:</label>
+				<textarea id="mensaje" name="mensaje" required></textarea>
+				<input type="submit" value="Enviar">
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<p>Derechos Reservados &copy; 2023</p>
+	</footer>
+
 </body>
 </html>
+
+
